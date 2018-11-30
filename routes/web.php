@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    echo "here i am";
+    return view('welcome');
+    // echo "here i am";
     exit;
 });
