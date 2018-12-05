@@ -11,12 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-    // echo "here i am";
-    exit;
-});
+// Route::get('/', function () {
+//     // return view('welcome');
+//     // echo "here i am";
+//     exit;
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/article', 'ArticleController@index');
+// Route::get('/article/create', 'ArticleController@create');
+// Route::post('/article/create', 'ArticleController@store');
+
+Route::resource('article', 'ArticleController');
