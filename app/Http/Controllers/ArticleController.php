@@ -60,8 +60,10 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
+        $pages = Article::paginate(5);
         $item = Article::find($id);
-        return view("article.show",["item" => $item]);
+        // die(var_dump($pages));
+        return view("article.show",["item" => $item, "pages" => $pages]);
     }
 
     /**

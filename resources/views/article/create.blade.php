@@ -41,6 +41,7 @@
                             <button type="submit" class="btn btn-primary">
                                 {{ __('投稿する') }}
                             </button>
+                            {{ $pages->links() }}
                         </div>
                     </div>
                 </form>
