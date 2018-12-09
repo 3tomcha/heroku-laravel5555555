@@ -39,41 +39,74 @@ class ArticleTableSeeder extends Seeder
     		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
     		'writer' => 'masumi ohsaki',
     		'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
     	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
-    	DB::table('articles')->insert([
-    		'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
-    		'writer' => 'masumi ohsaki',
-    		'article' => $article_sample,
-    	]);
+        
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
+        DB::table('articles')->insert([
+            'title' => '1200万人が登録するカレンダー共有アプリ「TimeTree」が9.2億円のファイナンスを実施',
+            'writer' => 'masumi ohsaki',
+            'article' => $article_sample,
+            'image' => 'https://techcrunchjp.files.wordpress.com/2018/11/dscf3143.jpg',
+        ]);
     }
 }

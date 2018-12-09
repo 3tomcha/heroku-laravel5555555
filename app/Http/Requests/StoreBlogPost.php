@@ -13,6 +13,7 @@ class StoreBlogPost extends FormRequest
      */
     public function authorize()
     {
+        // die("起動しました");
         return true;
     }
 
@@ -26,6 +27,7 @@ class StoreBlogPost extends FormRequest
         return [
             'title' => 'required|unique:articles|max:255',
             'article' => 'required|unique:articles|max:255',
+            'image' => 'required|image',
         ];
     }
     /**

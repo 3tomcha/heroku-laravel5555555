@@ -19,17 +19,5 @@
             </div>
         </div>
     </div>
-    <form action="" method="get">
-        <div class="form-group row mb-0">
-            <div class="mx-auto d-flex justify-content-between col-8">
-                <button type="submit" class="btn btn-secondary" formaction="/article/{{ ($item->id) - 1 }}">
-                    {{ __('前の記事へ') }}
-                </button>
-                <button type="submit" class="btn btn-primary" formaction="/article/{{ ($item->id) + 1 }}">
-                    {{ __('次の記事へ') }}
-                </button>
-            </div>
-        </div>
-    </form>
 </div>
 @endsection

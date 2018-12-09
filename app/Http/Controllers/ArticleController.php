@@ -7,6 +7,7 @@ use App\Article;
 use Illuminate\Support\Facades\Auth as Auth;
 use Illuminate\Contracts\Validation\Validator as Validator;
 use App\Http\Requests\StoreBlogPost as StoreBlogPost;
+use Illuminate\Support\Facades\Storage as Storage;
 
 // use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -41,14 +42,21 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(StoreBlogPost $request)
     {     
         $validated = $request->validated();
         $article = new Article;
+
+        $path = $validated['image']->store('public');
+        $filename = str_replace("public/","",$path);
+
         $article->article = $validated['article'];
         $article->title = $validated['title'];
+        $article->image = $filename;
         $article->writer = Auth::user()->name;
         $article->save();
+
         return redirect('/article/');
     }
 
@@ -60,9 +68,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $pages = Article::paginate(5);
         $item = Article::find($id);
-        // die(var_dump($pages));
         return view("article.show",["item" => $item, "pages" => $pages]);
     }
 
@@ -84,11 +90,18 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreBlogPost $request, $id)
     {
+        $validated = $request->validated();
         $article = Article::find($id);
-        $article->article = $request->input('article');
-        $article->title = $request->input('title');
+
+        $path = $validated['image']->store('public');
+        $filename = str_replace("public/","",$path);
+
+        $article->article = $validated['article'];
+        $article->title = $validated['title'];
+        $article->image = $filename;
+        $article->writer = Auth::user()->name;
         $article->save();
         return redirect('/article/');
     }

@@ -18,7 +18,7 @@
                 @endif
 
                 <div class="card-body">
-                    <form method="POST" action="/article/">
+                    <form method="POST" action="/article/" enctype="multipart/form-data" files='true'>
                         @csrf
 
                         <div class="form-group row">
@@ -31,17 +31,23 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label text-md-right">{{ __('記事') }}</label>
                             <div class="col-md-8">
-                             <textarea id="article" name="article" class="form-control" aria-label="With textarea"></textarea>
-                         </div>
-                     </div>
+                               <textarea id="article" name="article" class="form-control" aria-label="With textarea"></textarea>
+                           </div>
+                       </div>
 
-                     <div class="form-group row mb-0">
+                       <div class="form-group row">
+                        <label for="name" class="col-md-2 col-form-label text-md-right">{{ __('画像') }}</label>
+                        <div class="col-md-8">
+                            <input type="file" name="image" id="name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-0">
                         <div class="mx-auto d-flex justify-content-between col-8">
                             <button type="button" onclick="history.back()" class="btn btn-secondary">{{ __('戻る') }}</button>
                             <button type="submit" class="btn btn-primary">
                                 {{ __('投稿する') }}
                             </button>
-                            {{ $pages->links() }}
                         </div>
                     </div>
                 </form>
