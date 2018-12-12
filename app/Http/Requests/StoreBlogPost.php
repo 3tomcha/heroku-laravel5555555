@@ -27,7 +27,7 @@ class StoreBlogPost extends FormRequest
         return [
             'title' => 'required|unique:articles|max:255',
             'article' => 'required|unique:articles|max:255',
-            'image' => 'required|image',
+            'image' => 'image',
         ];
     }
     /**
@@ -38,7 +38,9 @@ class StoreBlogPost extends FormRequest
     public function messages()
     {
         return [
+            'title.required' => 'タイトルを入力してください',
             'title.unique' => 'タイトルが重複しています',
+            'article.required' => '記事の内容を入力してください',
             'article.unique' => '記事の内容が重複しています',
         ];
     }
