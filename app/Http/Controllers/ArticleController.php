@@ -7,7 +7,8 @@ use App\Article;
 use Illuminate\Support\Facades\Auth as Auth;
 use Illuminate\Contracts\Validation\Validator as Validator;
 use App\Http\Requests\StoreBlogPost as StoreBlogPost;
-use Illuminate\Support\Facades\Storage as Storage;
+use Storage;
+
 
 // use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -97,6 +98,8 @@ class ArticleController extends Controller
 
         $path = $validated['image']->store('public');
         $filename = str_replace("public/","",$path);
+        // $contents = Storage::get('public/'.$filename);
+        // Storage::disk('s3')->put($filename, $contents, 'public');
 
         $article->article = $validated['article'];
         $article->title = $validated['title'];
