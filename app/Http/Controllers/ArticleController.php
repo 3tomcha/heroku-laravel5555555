@@ -98,12 +98,12 @@ class ArticleController extends Controller
 
         $path = $validated['image']->store('public');
         $filename = str_replace("public/","",$path);
-        // $contents = Storage::get('public/'.$filename);
-        // Storage::disk('s3')->put($filename, $contents, 'public');
+        $contents = Storage::get('public/'.$filename);
+        Storage::disk('s3')->put($filename, $contents, 'public');
 
         $article->article = $validated['article'];
         $article->title = $validated['title'];
-        $article->image = $filename;
+        $article->image = Storage::disk('s3')->url($filename);
         $article->writer = Auth::user()->name;
         $article->save();
         return redirect('/article/');
