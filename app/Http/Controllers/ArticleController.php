@@ -46,19 +46,34 @@ class ArticleController extends Controller
 
     public function store(StoreBlogPost $request)
     {     
+        
         $validated = $request->validated();
         $article = new Article;
 
         $path = $validated['image']->store('public');
         $filename = str_replace("public/","",$path);
+        $contents = Storage::get('public/'.$filename);
+        Storage::disk('s3')->put($filename, $contents, 'public');
 
         $article->article = $validated['article'];
         $article->title = $validated['title'];
-        $article->image = $filename;
+        $article->image = Storage::disk('s3')->url($filename);
         $article->writer = Auth::user()->name;
         $article->save();
-
         return redirect('/article/');
+        // $validated = $request->validated();
+        // $article = new Article;
+
+        // $path = $validated['image']->store('public');
+        // $filename = str_replace("public/","",$path);
+
+        // $article->article = $validated['article'];
+        // $article->title = $validated['title'];
+        // $article->image = $filename;
+        // $article->writer = Auth::user()->name;
+        // $article->save();
+
+        // return redirect('/article/');
     }
 
     /**
