@@ -46,7 +46,6 @@
                         <div class="mx-auto d-flex justify-content-between col-8">
                             <button type="button" onclick="history.back()" class="btn btn-secondary">{{ __('戻る') }}</button>
                             
-                            <input type="hidden" name="_method" value="PUT">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('投稿する') }}
                             </button>
