@@ -18,8 +18,8 @@
                 @endif
 
                 <div class="card-body">
-                    <form method="POST" action="/article/" enctype="multipart/form-data" files='true'>
-                        @csrf
+                    <form action="/article" method="post" enctype="multipart/form-data" files='true'>
+                        {!! csrf_field() !!}
 
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label text-md-right">{{ __('タイトル') }}</label>
@@ -31,11 +31,11 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label text-md-right">{{ __('記事') }}</label>
                             <div class="col-md-8">
-                               <textarea id="article" name="article" class="form-control" aria-label="With textarea"></textarea>
-                           </div>
-                       </div>
+                             <textarea id="article" name="article" class="form-control" aria-label="With textarea"></textarea>
+                         </div>
+                     </div>
 
-                       <div class="form-group row">
+                     <div class="form-group row">
                         <label for="name" class="col-md-2 col-form-label text-md-right">{{ __('画像') }}</label>
                         <div class="col-md-8">
                             <input type="file" name="image" id="name" class="form-control">
@@ -45,6 +45,8 @@
                     <div class="form-group row mb-0">
                         <div class="mx-auto d-flex justify-content-between col-8">
                             <button type="button" onclick="history.back()" class="btn btn-secondary">{{ __('戻る') }}</button>
+                            
+                            <input type="hidden" name="_method" value="PUT">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('投稿する') }}
                             </button>
